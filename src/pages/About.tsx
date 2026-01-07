@@ -29,20 +29,20 @@ const About = () => {
       className="min-h-screen pt-24"
     >
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+      <section className="relative py-20 px-4 bg-primary-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="text-5xl font-bold mb-6"
+            className="text-5xl font-playfair font-bold mb-6"
           >
-            About GateWay Resort
+            About <span className="text-secondary">GateWay Resort</span>
           </motion.h1>
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl opacity-90"
+            className="text-xl opacity-90 font-lato"
           >
             Your perfect gateway to Kerala's natural beauty and cultural richness
           </motion.p>
@@ -50,7 +50,7 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-primary text-accent">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -58,21 +58,21 @@ const About = () => {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">
+              <h2 className="text-4xl font-playfair font-bold text-white mb-6">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg font-lato mb-6">
                 Nestled in the heart of Kerala's lush landscapes, GateWay Resort has been 
                 providing exceptional hospitality experiences for over a decade. Our resort 
                 combines traditional Kerala architecture with modern amenities to create 
                 a unique and memorable stay.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg font-lato mb-6">
                 Located strategically to offer easy access to Kerala's most beautiful 
                 destinations, we serve as your perfect base for exploring the backwaters, 
                 hill stations, and cultural sites that make Kerala truly special.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg font-lato">
                 Whether you're seeking a peaceful retreat, an adventure-filled vacation, 
                 or a venue for special celebrations, GateWay Resort promises an 
                 unforgettable experience tailored to your needs.
@@ -90,14 +90,14 @@ const About = () => {
                 alt="Resort exterior"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl -z-10"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-2xl -z-10"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Facilities Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-50 to-teal-50">
+      <section className="py-20 px-4 bg-primary-dark">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -105,10 +105,10 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-playfair font-bold text-white mb-4">
               World-Class Facilities
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-accent font-lato">
               Everything you need for a perfect stay
             </p>
           </motion.div>
@@ -121,15 +121,15 @@ const About = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-glass backdrop-blur-xs p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-full mb-4">
-                  <facility.icon className="h-6 w-6 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-full mb-4">
+                  <facility.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-playfair font-semibold text-white mb-2">
                   {facility.name}
                 </h3>
-                <p className="text-gray-600">{facility.desc}</p>
+                <p className="text-accent font-lato">{facility.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -137,7 +137,7 @@ const About = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-primary text-accent">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -145,10 +145,10 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-playfair font-bold text-white mb-4">
               Photo Gallery
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl font-lato">
               Discover the beauty of our resort
             </p>
           </motion.div>
@@ -168,7 +168,7 @@ const About = () => {
                   alt={`Gallery image ${index + 1}`}
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>

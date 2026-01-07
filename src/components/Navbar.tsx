@@ -29,7 +29,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-lg'
+          ? 'bg-glass backdrop-blur-xs shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -37,8 +37,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <MapPin className="h-8 w-8 text-green-600" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
+            <MapPin className="h-8 w-8 text-secondary" />
+            <span className="text-2xl font-playfair font-bold text-white">
               GateWay Resort
             </span>
           </Link>
@@ -49,17 +49,17 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative px-3 py-2 rounded-lg transition-all duration-300 ${
+                className={`relative px-3 py-2 rounded-lg transition-all duration-300 font-lato ${
                   location.pathname === item.path
-                    ? 'text-green-600 font-semibold'
-                    : 'text-gray-700 hover:text-green-600'
+                    ? 'text-secondary font-semibold'
+                    : 'text-accent hover:text-secondary'
                 }`}
               >
                 {item.name}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary"
                   />
                 )}
               </Link>
@@ -69,9 +69,9 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-800"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6 text-accent" /> : <Menu className="h-6 w-6 text-accent" />}
           </button>
         </div>
 
@@ -81,17 +81,17 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden py-4 border-t border-gray-200"
+            className="md:hidden py-4 border-t border-gray-700"
           >
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-lg transition-all duration-300 ${
+                className={`block px-3 py-2 rounded-lg transition-all duration-300 font-lato ${
                   location.pathname === item.path
-                    ? 'text-green-600 font-semibold bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
+                    ? 'text-secondary font-semibold bg-gray-800'
+                    : 'text-accent hover:text-secondary hover:bg-gray-800'
                 }`}
               >
                 {item.name}

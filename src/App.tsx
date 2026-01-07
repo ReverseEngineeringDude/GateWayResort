@@ -14,7 +14,7 @@ function App() {
   return (
     <BookingProvider>
       <Router basename={import.meta.env.BASE_URL}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-teal-50">
+        <div className="min-h-screen bg-primary text-accent">
           <Navbar />
           <AnimatePresence mode="wait">
             <Routes>

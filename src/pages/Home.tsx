@@ -27,7 +27,7 @@ const Home = () => {
             alt="Kerala Resort"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         {/* Hero Content */}
@@ -36,10 +36,10 @@ const Home = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-playfair font-bold mb-6 leading-tight"
           >
             Welcome to{' '}
-            <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="text-secondary">
               GateWay Resort
             </span>
           </motion.h1>
@@ -48,7 +48,7 @@ const Home = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl mb-8 opacity-90"
+            className="text-xl md:text-2xl font-lato mb-8 opacity-90"
           >
             Experience the pristine beauty of Kerala with luxury and comfort
           </motion.p>
@@ -60,7 +60,7 @@ const Home = () => {
           >
             <Link
               to="/booking"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-secondary text-primary font-semibold rounded-full hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Book Now
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -70,7 +70,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-primary">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -78,10 +78,10 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-playfair font-bold text-white mb-4">
               Why Choose GateWay Resort?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-accent font-lato">
               Discover what makes us special
             </p>
           </motion.div>
@@ -94,15 +94,15 @@ const Home = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
+                className="text-center p-8 rounded-2xl bg-glass backdrop-blur-xs shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-teal-600 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4">
+                  <feature.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-playfair font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">{feature.desc}</p>
+                <p className="text-accent font-lato">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -110,7 +110,7 @@ const Home = () => {
       </section>
 
       {/* Gallery Preview */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-50 to-teal-50">
+      <section className="py-20 px-4 bg-primary-dark">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -118,10 +118,10 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-playfair font-bold text-white mb-4">
               Experience Kerala's Beauty
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-accent font-lato">
               A glimpse into paradise
             </p>
           </motion.div>
@@ -145,7 +145,7 @@ const Home = () => {
                   alt={`Resort view ${index + 1}`}
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -158,7 +158,7 @@ const Home = () => {
           >
             <Link
               to="/about"
-              className="inline-flex items-center px-6 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-3 bg-secondary text-primary font-semibold rounded-full hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Learn More About Us
               <ArrowRight className="ml-2 h-5 w-5" />
