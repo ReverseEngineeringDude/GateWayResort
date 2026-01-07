@@ -13,7 +13,7 @@ import { BookingProvider } from './context/BookingContext';
 function App() {
   return (
     <BookingProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-teal-50">
           <Navbar />
           <AnimatePresence mode="wait">
